@@ -40,6 +40,11 @@ module.exports = {
       Environment: JSON.stringify(require('config')),
     }),
     new LiveReloadPlugin({appendScriptTag:true}),
+    new webpack.ProvidePlugin({
+       jQuery: 'jquery',
+       $: 'jquery',
+       jquery: 'jquery'
+   })
   ],
 
   resolve: {

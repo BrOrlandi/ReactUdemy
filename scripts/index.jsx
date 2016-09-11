@@ -1,13 +1,12 @@
-import ReactDOM from 'react-dom';
-import React from 'react';
+import 'jquery';
+import 'bootstrap/dist/js/bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-class App extends React.Component {
-    render(){
-        return (
-            <div>
-                <h1>Hello React App!</h1>
-            </div>
-        );
-    }
-};
-ReactDOM.render(<App/>, document.getElementById('react-body'));
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+import routes from './routes';
+
+import Api from './utils/api';
+
+ReactDOM.render(routes, document.getElementById('react-body'));
