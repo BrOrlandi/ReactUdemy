@@ -5,6 +5,7 @@ var webpack = require('webpack'),
     path = require('path');
 
 var cssExtractTextPlugin = new ExtractTextPlugin('[contenthash].css');
+var SoundNotificationWebpackPlugin = require('sound-notification-webpack-plugin');
 
 module.exports = {
   entry: {
@@ -44,7 +45,12 @@ module.exports = {
        jQuery: 'jquery',
        $: 'jquery',
        jquery: 'jquery'
-   })
+   }),
+   new SoundNotificationWebpackPlugin({
+      player: 'paplay',
+    //   successSound: '/usr/share/sounds/freedesktop/stereo/dialog-information.oga',
+      errorSound: './assets/wasted.ogg'
+    })
   ],
 
   resolve: {

@@ -50,6 +50,7 @@
     "less-loader": "^2.2.0",
     "node-sass": "^3.7.0",
     "sass-loader": "^3.2.0",
+    "sound-notification-webpack-plugin": "^1.0.0",
     "style-loader": "^0.13.0",
     "webpack": "^1.13.0",
     "webpack-dev-server": "^1.14.1",

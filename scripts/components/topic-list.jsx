@@ -10,7 +10,7 @@ class TopicList extends React.Component {
         super();
         this.state = {
             topics: []
-        }
+        };
     }
 
     componentWillMount(){
@@ -28,7 +28,10 @@ class TopicList extends React.Component {
 
     renderTopics(){
         return this.state.topics.map((topic)=>{
-            return <li>{topic.name}</li>
+            return <Link to={"/topics/"+topic.id} className="list-group-item" key={topic.id}>
+                <h4>{topic.name}</h4>
+                <p>{topic.description}</p>
+            </Link>
         })
     }
 
